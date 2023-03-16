@@ -1,0 +1,9 @@
+workflows:
+  m1:
+    name: maven verify
+    instance_type: mac_mini_m1
+    environment:
+      java: 11
+    scripts:
+      - name: Test with Maven
+        script: mvn --errors --batch-mode verify
